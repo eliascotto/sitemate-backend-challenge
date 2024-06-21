@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "title": "Login page not responsive on mobile devices",
+    "description": "The login page layout breaks when viewed on smartphones. Buttons and input fields overlap making it unusable."
+  },
+  {
+    "id": 2,
+    "title": "API rate limiting not working as expected",
+    "description": "Current rate limiting allows more requests than specified in the documentation. This could lead to server overload."
+  },
+  {
+    "id": 3,
+    "title": "Add dark mode support",
+    "description": "Implement a dark mode option for better user experience in low-light environments and to reduce eye strain."
+  },
+  {
+    "id": 4,
+    "title": "Security vulnerability in password reset function",
+    "description": "The current password reset mechanism is vulnerable to timing attacks. We need to implement a more secure method."
+  },
+  {
+    "id": 5,
+    "title": "Optimize database queries for faster load times",
+    "description": "Several pages are loading slowly due to inefficient database queries. We need to review and optimize these for better performance."
+  }
+]
