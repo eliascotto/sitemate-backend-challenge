@@ -1,9 +1,9 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const OutputTextbar = ({ jsonData }) => {
   return (
-    <div className="bg-gray-800 text-white p-4 rounded shadow-lg">
+    <div className="bg-gray-800 text-white p-4 rounded shadow-lg flex-1">
       <pre className="whitespace-pre-wrap">{JSON.stringify(jsonData, null, 2)}</pre>
     </div>
   )
@@ -169,13 +169,17 @@ export default function Home() {
     }
   }
 
+  useEffect(() => {
+    fetchIssues()
+  }, [])
+
   return (
-    <main className="bg-gray-900 flex min-h-screen flex-col items-center justify-around gap-30 p-24">
-      <h1 className="text-2xl text-white">Issue Tracker</h1>
+    <main className="bg-gray-900 flex min-h-screen flex-col items-center justify-around gap-30 px-24">
+      <h1 className="text-2xl text-white pb-4">Issue Tracker</h1>
 
       <div className="flex flex-row items-center justify-around space-y-4">
         <OutputTextbar jsonData={issues} />
-        <div className="flex flex-col justify-between gap-10">
+        <div className="flex flex-col justify-between gap-10 flex-1 p-20 max-w-xl">
           <CRUDForm
             onCreate={createIssue}
             onUpdate={updateIssue}
